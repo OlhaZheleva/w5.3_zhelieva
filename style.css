@@ -1,0 +1,175 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+/*-------normalize-------------*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Removing padding */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Removing margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Set the basic default settings for the body */
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+}
+
+/* Remove the default styling for all ul and li that have a class attribute */
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Elements a that don't have a class are reset to default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Indicate a clear frequency in the data flow for article */
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Inheriting fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    outline: none;
+
+    background: none;
+    border: none;
+}
+
+/*------------------*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.wrapper {}
+
+.support {}
+
+[class*="_block-header"] {
+    padding: 0 10%;
+}
+
+.sub-title {
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #0536FC;
+    opacity: 0.9;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.description {
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    opacity: 0.35;
+    margin-bottom: 30px;
+    max-width: 325px;
+}
+
+
+
+.button {
+    background-color: #0536FC;
+    width: 213px;
+    height: 55px;
+
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {}
+
+/* Iphone 5 */
+@media (max-width: 320px) {}
