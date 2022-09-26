@@ -54,7 +54,8 @@ a:not([class]) {
 
 a {
     text-decoration: none;
-    color: #000;
+    color:#0536FC;
+
 }
 
 img {
@@ -93,14 +94,18 @@ body {
 body {
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 16px;
     line-height: 24px;
+
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
 }
 
 .wrapper {
-    margin: 0 auto;
+    margin: 30px auto;
     max-width: 1440px;
+    padding: 0 20px;
 }
 
 .wrapper {}
@@ -112,26 +117,19 @@ body {
 }
 
 .sub-title {
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
     color: #0536FC;
     opacity: 0.9;
-    font-weight: 700;
     margin-bottom: 30px;
 }
 
 .title {
-    font-weight: 700;
     font-size: 28px;
     line-height: 34px;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
     margin-bottom: 30px;
 }
 
 .description {
     font-weight: 300;
-    letter-spacing: -0.03em;
     opacity: 0.35;
     margin-bottom: 30px;
     max-width: 325px;
@@ -141,6 +139,7 @@ body {
 
 .button {
     background-color: #0536FC;
+    font-weight: 400;
     width: 213px;
     height: 55px;
 
@@ -150,8 +149,146 @@ body {
     color: #FFFFFF;
 }
 
+
+.form {
+
+}
+
+.form__title { 
+    margin-bottom: 20px;
+}
+.form__body { 
+
+}
+.button {}
+
+.payment { 
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    margin-bottom: 48px;
+}
+
+.payment label, 
+.period label { 
+    opacity: 0.6;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.payment input,
+.period input { 
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    transition: 0.2s all linear;
+}
+
+.sum { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 50px);
+    justify-items: center;
+    align-items: center;
+
+    margin-bottom: 22px;
+
+    font-weight: 400;
+}
+
+.sum input:not(:last-child) { 
+    display: none;
+}
+
+.sum label { 
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+
+}
+
+.sum label:nth-child(4) { 
+    border-right: none;
+}
+
+.sum input:checked + label {
+    background-color: #0536FC;
+    color: #FFFFFF;
+}
+
+.other { 
+    padding-left: 35px;;
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+    justify-self: start;
+
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: none;
+}
+
+.period { 
+    margin-bottom: 50px;
+}
+
+.personal { 
+    display: flex;
+    flex-direction: column;
+}
+
+
+.personal input { 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 5px;
+    max-width: 478px;
+
+    margin-bottom: 30px;
+}
+
+.personal input::placeholder { 
+    font-weight: 300;
+    opacity: 0.35;
+}
+
+.contract label, 
+.private label { 
+    font-weight: 400;
+    opacity: 0.6;
+    text-transform: none;
+}
+
+.contract { 
+    margin-bottom: 16px;
+}
+.private {
+    margin-bottom: 48px;
+}
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
+        .sum { 
+            grid-template-columns: repeat(4, 160px);
+        }
+}
+@media (min-width: 992px) { 
+    .payment {
+            display: block;
+        }
+    .payment input,
+    .period input { 
+        position: relative;
+        top: 2px;
+}
+        .payment label,
+        .period label { 
+            margin-right: 30px;
+        }
 
 }
 
@@ -165,8 +302,29 @@ body {
 
 }
 
+@media (min-width: 767px) {
+    .form {
+            display: flex;
+        }
+    body {
+    font-size: 16px;
+    line-height: 24px;
+    }
+    .form__title {
+        width: 50%;
+    }
+
+    .form__body {
+        width: 50%;
+    }
+
+}
+    
+
 /* Landscape phones and portrait tablets */
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+}
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {}
